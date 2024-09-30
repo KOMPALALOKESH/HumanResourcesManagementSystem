@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department-wise Employee Count</title>
+    <style>
+        table {
+            border-collapse: collapse; /* Merge border lines */
+            width: 100%; /* Make the table width full */
+        }
+        th, td {
+            border: 1px solid black; /* Add border to table cells */
+            padding: 8px; /* Add some padding inside cells */
+            text-align: left; /* Align text to the left */
+        }
+        th {
+            background-color: #f2f2f2; /* Light gray background for header */
+        }
+    </style>
+</head>
+<body>
+    <h2>Department-wise Employee Count</h2>
+    <table>
+        <tr>
+            <th>Department</th>
+            <th>Employee Count</th>
+        </tr>
+        {% for data in report_data %}
+        <tr>
+            <td>{{ data.department }}</td>
+            <td>{{ data.employee_count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
